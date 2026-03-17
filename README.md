@@ -53,7 +53,7 @@ Ensure you have Node.js (v16 or higher) installed on your machine.
 
 ## 2. Clone the Repository
 ```text
-git clone [https://github.com/your-username/furnisy-room-designer-app.git]
+git clone [https://github.com/ydagunawardhana/Furnisy-Room-Designer-App.git]
 cd furnisy-room-designer-app
 ```
 ## 3. Run the User Application

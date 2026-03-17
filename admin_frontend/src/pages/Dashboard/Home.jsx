@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import EcommerceMetrics from "../../components/ecommerce/EcommerceMetrics";
-import MonthlySalesChart from "../../components/ecommerce/MonthlySalesChart";
-import StatisticsChart from "../../components/ecommerce/StatisticsChart";
-import MonthlyTarget from "../../components/ecommerce/MonthlyTarget";
-import RecentOrders from "../../components/ecommerce/RecentOrders";
-import TopSellingCategories from "../../components/ecommerce/TopSellingCategories";
-import TopCustomers from "../../components/ecommerce/TopCustomers";
+import EcommerceMetrics from "../../components/charts/EcommerceMetrics";
+import MonthlySalesChart from "../../components/charts/MonthlySalesChart";
+import StatisticsChart from "../../components/charts/StatisticsChart";
+import MonthlyTarget from "../../components/charts/MonthlyTarget";
+import RecentOrders from "../../components/charts/RecentOrders";
+import TopSellingCategories from "../../components/charts/TopSellingCategories";
+import TopCustomers from "../../components/charts/TopCustomers";
 import PageMeta from "../../components/common/PageMeta";
 import { FaSpinner } from "react-icons/fa";
 import { collection, getDocs } from "firebase/firestore";

@@ -12,6 +12,8 @@ import {
 import { useSidebar } from "../../context/SidebarContext";
 import { MdLogout } from "react-icons/md";
 import toast from "react-hot-toast";
+import { signOut } from "firebase/auth";
+import { auth } from "../../firebase";
 
 const menuGroups = [
   {
@@ -118,40 +120,50 @@ const Sidebar = () => {
     });
   };
 
-  const handleLogout = () => {
-    toast.custom(
-      (t) => (
-        <div
-          className={`${
-            t.visible ? "animate-fade-up" : "animate-fade-down"
-          } bg-[#333] text-white px-4 py-3 rounded-lg shadow-xl flex items-center gap-3`}
-        >
-          <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center shrink-0">
-            <svg
-              className="w-3.5 h-3.5 text-white"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="3"
-                d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
-              ></path>
-            </svg>
-          </div>
-          <span className="text-[14px] font-medium tracking-wide">
-            Logged out successfully!
-          </span>
-        </div>
-      ),
-      { id: "logoutToast", position: "top-right", duration: 2000 }
-    );
+  const handleLogout = async () => {
+    try {
+      await signOut(auth);
 
-    setTimeout(() => {
-      navigate("/signin");
-    }, 1500);
+      if (typeof closeDropdown === "function") {
+        closeDropdown();
+      }
+
+      toast.custom(
+        (t) => (
+          <div
+            className={`${
+              t.visible ? "animate-fade-up" : "animate-fade-down"
+            } bg-[#333] text-white px-4 py-3 rounded-lg shadow-xl flex items-center gap-3`}
+          >
+            <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center shrink-0">
+              <svg
+                className="w-3.5 h-3.5 text-white"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="3"
+                  d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"
+                ></path>
+              </svg>
+            </div>
+            <span className="text-[14px] font-medium tracking-wide">
+              Logged out successfully!
+            </span>
+          </div>
+        ),
+        { id: "logoutToast", position: "top-right", duration: 2000 }
+      );
+
+      setTimeout(() => {
+        navigate("/signin", { replace: true });
+      }, 1500);
+    } catch (error) {
+      console.error("Logout error:", error);
+    }
   };
 
   return (

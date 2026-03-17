@@ -17,6 +17,7 @@ import SavedRooms from "./pages/Customers/SavedRooms";
 import Support from "./pages/Support";
 import Settings from "./pages/Settings/Settings";
 import { Toaster } from "react-hot-toast";
+import ProtectedRoute from "./components/auth/ProtectedRoute";
 
 export default function App() {
   return (
@@ -31,7 +32,13 @@ export default function App() {
         <ScrollToTop />
         <Routes>
           {/* Dashboard Layout */}
-          <Route element={<AppLayout />}>
+          <Route
+            element={
+              <ProtectedRoute>
+                <AppLayout />
+              </ProtectedRoute>
+            }
+          >
             <Route path="/" element={<Home />} />
 
             {/* Products */}

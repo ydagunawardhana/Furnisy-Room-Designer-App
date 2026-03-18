@@ -2491,6 +2491,7 @@ const RoomDesigner = () => {
                     ? "bg-zinc-200 text-black"
                     : "text-gray-500 hover:bg-zinc-100 hover:text-black"
                 }`}
+                title="Wall Color"
               >
                 <MdOutlineColorLens size={25} />
               </button>
@@ -2509,6 +2510,7 @@ const RoomDesigner = () => {
                   ? "bg-zinc-200 text-black"
                   : "text-gray-500 hover:bg-zinc-100 hover:text-black"
               }`}
+              title="Ruler"
             >
               <MdOutlineStraighten size={24} />
             </button>

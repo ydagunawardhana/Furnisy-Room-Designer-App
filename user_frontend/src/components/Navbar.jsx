@@ -457,6 +457,7 @@ const Navbar = () => {
           <div
             onClick={() => setIsSearchOpen(!isSearchOpen)}
             className="cursor-pointer hover:opacity-70 flex items-center justify-center"
+            title="Search"
           >
             {isSearchOpen ? (
               <LuSearchX className="w-7 h-7 text-black font-[15px]" />
@@ -489,7 +490,10 @@ const Navbar = () => {
             ) : (
               <Link to="/login">
                 <div className="cursor-pointer hover:opacity-70">
-                  <CgProfile className="w-7 h-7 text-gray-700" />
+                  <CgProfile
+                    className="w-7 h-7 text-gray-700"
+                    title="Profile"
+                  />
                 </div>
               </Link>
             )}
@@ -545,7 +549,10 @@ const Navbar = () => {
           {/* Wishlist (Heart) Icon */}
           <Link to="/wishlist">
             <div className="relative cursor-pointer hover:opacity-70">
-              <RiHeart3Line className="w-7 h-7 text-gray-700" />
+              <RiHeart3Line
+                className="w-7 h-7 text-gray-700"
+                title="Wishlist"
+              />
               {wishlistCount > 0 && (
                 <span className="absolute -top-2.5 -right-3 bg-[#181818] text-white text-[11px] font-bold w-5 h-5 rounded-full flex items-center justify-center shadow-sm">
                   {wishlistCount}
@@ -562,6 +569,7 @@ const Navbar = () => {
             <FaExchangeAlt
               size={20}
               className="relative cursor-pointer hover:opacity-70"
+              title="Compare"
             />
 
             {compareCount > 0 && (
@@ -576,7 +584,10 @@ const Navbar = () => {
             onClick={() => setIsCartOpen(true)}
             className="relative cursor-pointer hover:opacity-70"
           >
-            <MdShoppingCartCheckout className="w-6 h-6 text-gray-800" />
+            <MdShoppingCartCheckout
+              className="w-6 h-6 text-gray-800"
+              title="Cart"
+            />
             {totalItems > 0 && (
               <span className="absolute -top-3 -right-3 bg-[#181818] text-white text-[12px] font-bold w-5 h-5 rounded-full flex items-center justify-center shadow-sm">
                 {totalItems}
@@ -595,7 +606,10 @@ const Navbar = () => {
                     } bg-[#333] text-white px-5 py-3.5 rounded-xl shadow-2xl flex items-center gap-3 border border-blue-400/30`}
                   >
                     <div className="shrink-0 bg-white/20 p-2 rounded-full flex items-center justify-center">
-                      <FaRegBell className="text-white w-5 h-5" />
+                      <FaRegBell
+                        className="text-white w-5 h-5"
+                        title="Notifications"
+                      />
                     </div>
                     <div className="flex flex-col text-left">
                       <span className="text-[14px] font-bold leading-none mb-1.5">

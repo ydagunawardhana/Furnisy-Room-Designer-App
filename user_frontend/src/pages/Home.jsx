@@ -663,6 +663,7 @@ const Home = () => {
                         addToCart(product, 1, "Standard Wood", "Coral");
                       }}
                       className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-gray-700 hover:bg-black hover:text-white shadow-md transition-colors"
+                      title="Cart"
                     >
                       <FaShoppingCart />
                     </button>
@@ -672,6 +673,7 @@ const Home = () => {
                         toggleWishlist(product);
                       }}
                       className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-gray-700 hover:bg-black hover:text-white shadow-md transition-colors"
+                      title="Wishlist"
                     >
                       {isInWishlist ? (
                         <FaHeart className="text-red-500" />
@@ -685,6 +687,7 @@ const Home = () => {
                         toggleCompare(product);
                       }}
                       className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-gray-700 hover:bg-black hover:text-white shadow-md transition-colors"
+                      title="Compare"
                     >
                       {isInCompare ? (
                         <TiArrowShuffle className="text-red-500 w-6 h-6 font-medium" />
@@ -699,6 +702,7 @@ const Home = () => {
                         setView3DProduct(null);
                       }}
                       className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-gray-700 hover:bg-black hover:text-white shadow-md transition-colors"
+                      title="View"
                     >
                       <FaRegEye />
                     </button>

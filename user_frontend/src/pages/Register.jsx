@@ -73,7 +73,7 @@ const Register = () => {
         { position: "top-right", duration: 2000 }
       );
 
-      setTimeout(() => navigate("/"), 1500);
+      setTimeout(() => navigate("/login"), 1500);
     } catch (error) {
       toast.custom(
         (t) => (

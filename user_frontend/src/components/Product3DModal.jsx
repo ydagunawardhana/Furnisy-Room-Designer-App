@@ -284,8 +284,6 @@ const Product3DModal = ({ isOpen, onClose, product }) => {
               onClick={() => {
                 const colorName = getColorName(selectedColor);
                 addToCart(product, 1, "M", colorName);
-
-                alert(`${product.name} added to Cart!`);
               }}
               className="bg-black hover:bg-white hover:text-black text-white px-7 py-3.5 rounded-full font-bold text-[14px] transition-transform active:scale-95 
             flex items-center gap-2 shadow-md border-2 border-zinc-200"

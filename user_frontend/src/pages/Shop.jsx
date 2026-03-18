@@ -643,6 +643,7 @@ const Shop = () => {
                             }}
                             className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-gray-700 hover:bg-black 
                       hover:text-white shadow-md transition-colors"
+                            title="Cart"
                           >
                             <FaShoppingCart />
                           </button>
@@ -673,6 +674,7 @@ const Shop = () => {
                             }}
                             className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-gray-700 hover:bg-black 
                       hover:text-white shadow-md transition-colors"
+                            title="Wishlist"
                           >
                             {isInWishlist ? (
                               <FaHeart className="text-red-500" />
@@ -687,6 +689,7 @@ const Shop = () => {
                             }}
                             className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-gray-700 hover:bg-black 
                       hover:text-white shadow-md transition-colors"
+                            title="Compare"
                           >
                             {isInCompare ? (
                               <TiArrowShuffle className="text-red-500 w-6 h-6 font-medium" />
@@ -702,6 +705,7 @@ const Shop = () => {
                             }}
                             className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-gray-700 hover:bg-black 
                       hover:text-white shadow-md transition-colors"
+                            title="View"
                           >
                             <FaRegEye />
                           </button>
@@ -802,6 +806,7 @@ const Shop = () => {
                             }}
                             className="w-11 h-11 flex items-center justify-center border-2 border-zinc-300 rounded-full text-gray-600 hover:text-black 
                       hover:border-black transition-colors cursor-pointer"
+                            title="Wishlist"
                           >
                             {isInWishlist ? (
                               <FaHeart className="text-red-500" />
@@ -817,6 +822,7 @@ const Shop = () => {
                             }}
                             className="w-11 h-11 flex items-center justify-center border-2 border-zinc-300 rounded-full text-gray-600 hover:text-black 
                       hover:border-black transition-colors cursor-pointer"
+                            title="View"
                           >
                             <FaRegEye />
                           </button>
@@ -827,6 +833,7 @@ const Shop = () => {
                             }}
                             className="w-11 h-11 flex items-center justify-center border-2 border-zinc-300 rounded-full text-gray-600 hover:text-black 
                       hover:border-black transition-colors cursor-pointer"
+                            title="Compare"
                           >
                             {isInCompare ? (
                               <TiArrowShuffle className="text-red-500 w-6 h-6 font-medium" />

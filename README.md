@@ -1,9 +1,9 @@
 # 🛋️ Furnisy - 3D Furniture Room Designer Store & Admin Portal
 
-A web-based 3D furniture e-commerce and interactive room designer application. Developed by the PUSL3122 coursework [GROUP-52]
+A web-based 3D furniture e-commerce and interactive room designer application.
 
 ## 📖 Project Overview
-**Furnisy** is a modern, interactive e-commerce platform designed to revolutionize the way users shop for furniture. This project was developed as part of a Human-Computer Interaction (HCI) coursework. It features a unique **3D Room Designer** that allows users to visualize furniture in a virtual space before purchasing. The system consists of two main applications: a Customer-facing Frontend and a powerful Admin Dashboard.
+**Furnisy** is a modern, interactive e-commerce platform designed to revolutionize the way users shop for furniture. This project was developed as part of a Human-Computer Interaction (HCI). It features a unique **3D Room Designer** that allows users to visualize furniture in a virtual space before purchasing. The system consists of two main applications: a Customer-facing Frontend and a powerful Admin Dashboard.
 
 ## ✨ Key Features
 
@@ -79,4 +79,4 @@ npm run dev
 The Admin App will typically run on http://localhost:5174
 
 ## 👨‍💻 Developed By
-Developed as part of an HCI Coursework Project.
+Developed as part of an HCI Project.
